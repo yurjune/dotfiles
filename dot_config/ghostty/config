@@ -1,0 +1,25 @@
+# press cmd+shift+, to apply config
+
+font-size = 11
+# if -calt, disables ligature
+# font-feature = -calt
+
+background-opacity = 1
+background-blur = 15
+
+keybind = cmd+left=previous_tab
+keybind = cmd+right=next_tab
+keybind = ctrl+space=ignore
+
+macos-titlebar-style = transparent
+cursor-style = block
+shell-integration = zsh
+
+# when you drag any text, copy it immediately
+copy-on-select = clipboard
+
+# adjust text cell height => adjust line height
+adjust-cell-height = 10%
+
+macos-option-as-alt = true
+
