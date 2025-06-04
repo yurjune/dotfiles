@@ -1,0 +1,32 @@
+[merge]
+	ff = false
+[push]
+	autoSetupRemote = true
+[core]
+	excludesfile = /Users/jerry/.gitignore_global
+[commit]
+	template = /Users/jerry/.stCommitMsg
+[credential]
+	username = jerry-classum
+[user]
+	name = Jerry
+	email = jerry@classum.com
+[alias]
+	lg = log -1000
+	lo = log --oneline -1000
+	lgg = log --oneline --graph --decorate -1000
+	cm = commit -m
+	cp = cherry-pick
+	rhh = reset --hard HEAD^
+	rsh = reset HEAD^
+	ri = rebase -i
+	rc = rebase --continue
+	ra = rebase --abort
+	aa = add --all
+	sc = switch -c
+	st = stash push -u
+	stl = stash list
+	stp = stash pop
+	sta = stash apply
+[rerere]
+	enabled = false
