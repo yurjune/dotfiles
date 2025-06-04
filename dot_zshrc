@@ -1,0 +1,58 @@
+# If you come from bash you might have to change your $PATH.
+export PATH="/usr/local/opt/python@3.10/bin:$PATH"
+export PATH="$PATH:$HOME/.cargo/bin"
+export PYTHON="/usr/local/opt/python@3.10/bin/python3"
+
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+ZSH_THEME="af-magic"
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git fzf-tab zsh-autosuggestions zsh-syntax-highlighting)
+
+source $ZSH/oh-my-zsh.sh
+source /Users/jerry/.oh-my-zsh/custom/plugins/fzf-tab/fzf-tab.zsh
+source /Users/jerry/.oh-my-zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /Users/jerry/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# You may need to manually set your language environment
+export LANG=en_US.UTF-8
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# 프롬프트에서 사용자명을 상황에 맞게 표시
+prompt_context() {
+  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+  fi
+}
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# 별도의 쉘 환경설정(env) 파일 실행
+. "$HOME/.local/bin/env"
+
+if [ -f ~/.zshrc.local ]; then
+    source ~/.zshrc.local
+fi
