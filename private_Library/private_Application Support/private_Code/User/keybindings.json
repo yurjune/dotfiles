@@ -1,0 +1,19 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "cmd+r",
+    "command": "workbench.action.openRecent"
+  },
+  {
+    "key": "ctrl+6",
+    "command": "-extension.vim_ctrl+6"
+  },
+  {
+    "key": "shift+cmd+j",
+    "command": "search.action.focusSearchList"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.switchWindow"
+  }
+]

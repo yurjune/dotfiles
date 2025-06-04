@@ -1,0 +1,123 @@
+{
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.settings.useSplitJSON": true,
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.colorTheme": "Halcyon",
+  "workbench.startupEditor": "none",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.inlayHints.enabled": "off",
+  "editor.tabSize": 2,
+  "editor.fontSize": 13,
+  "editor.indentSize": "tabSize",
+  "editor.insertSpaces": true, // convert tab to space
+  "editor.lineNumbers": "relative",
+  "editor.autoIndent": "full",
+  "editor.wordWrap": "off",
+  "editor.stickyScroll.enabled": true,
+  "editor.smoothScrolling": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.tokenColorCustomizations": {
+    "comments": "#bdfcc9" // Light Mint
+  },
+  "editor.cursorSurroundingLines": 4, // scroll offsets
+  "editor.cursorSurroundingLinesStyle": "all",
+  "editor.folding": true,
+  "editor.foldingStrategy": "auto",
+  "editor.accessibilitySupport": "off",
+  "editor.minimap.enabled": false,
+  "search.smartCase": false,
+  "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.ABC",
+  "vim.autoSwitchInputMethod.obtainIMCmd": "/opt/homebrew/bin/im-select",
+  "vim.autoSwitchInputMethod.switchIMCmd": "/opt/homebrew/bin/im-select {im}",
+  "vim.autoSwitchInputMethod.enable": true,
+  "vim.foldfix": true,
+
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<C-q>"],
+      "after": ["<C-6>"]
+    },
+    {
+      "before": ["<leader>", "q"],
+      "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
+      "before": ["<leader>", "d", "l"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["<leader>", "r", "n"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["<leader>", "e", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<leader>", "e", "f"],
+      "commands": ["workbench.view.explorer"]
+    },
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "f", "s"],
+      "commands": ["workbench.view.search"]
+    },
+    {
+      "before": ["<leader>", "b", "n"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<leader>", "b", "p"],
+      "commands": ["workbench.action.prevEditor"]
+    }
+  ],
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<C-e>"],
+      "commands": ["editor.action.triggerSuggest"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "f", "s"],
+      "commands": ["workbench.action.findInFiles"]
+    }
+  ],
+  "javascript.preferences.useAliasesForRenames": false,
+  "typescript.updateImportsOnFileMove.enabled": "prompt",
+  "typescript.preferences.useAliasesForRenames": false,
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "[python]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+  },
+  "eslint.format.enable": true,
+  "git.openRepositoryInParentFolders": "always",
+  "window.zoomLevel": -1,
+  "vsicons.dontShowNewVersionMessage": true,
+  "jest.runMode": "on-demand",
+  "highlight-matching-tag.styles": {
+    "opening": {
+      "name": {
+        "surround": "#ffc2c2"
+      }
+    }
+  },
+  "svelte.enable-ts-plugin": true,
+  "gitlens.advanced.messages": {
+    "suppressIntegrationRequestTimedOutWarning": true
+  }
+}
