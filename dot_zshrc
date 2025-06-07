@@ -37,12 +37,13 @@ export LANG=en_US.UTF-8
 alias nv="neovide"
 alias nvmd="neovide -- --cmd 'let g:markdown_mode = 1'"
 
+alias lg="lazygit"
+alias ch="chezmoi"
+
 # tmux aliases
-alias tmn="tmux new"
-alias tma="tmux attach -t"
-alias tma0="tmux attach-session -t 0"
-alias tma1="tmux attach-session -t 1"
-alias tma2="tmux attach-session -t 2"
+alias tmn="tmux new -s"
+alias tmN="tmux new"
+alias tma="tmux attach"
 alias tmd="tmux detach"
 alias tmk="tmux kill-session"
 alias tmkt="tmux kill-session -t"
