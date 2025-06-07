@@ -34,10 +34,22 @@ export LANG=en_US.UTF-8
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias nv="neovide"
+alias nvmd="neovide -- --cmd 'let g:markdown_mode = 1'"
+
+# tmux aliases
+alias tmn="tmux new"
+alias tma="tmux attach -t"
+alias tma0="tmux attach-session -t 0"
+alias tma1="tmux attach-session -t 1"
+alias tma2="tmux attach-session -t 2"
+alias tmd="tmux detach"
+alias tmk="tmux kill-session"
+alias tmkt="tmux kill-session -t"
+alias tmK="tmux kill-server"
+
+# prevent kill shell by Ctrl-D
+setopt IGNORE_EOF
 
 # 프롬프트에서 사용자명을 상황에 맞게 표시
 prompt_context() {
