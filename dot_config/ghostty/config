@@ -23,3 +23,16 @@ adjust-cell-height = 10%
 
 macos-option-as-alt = true
 
+# Configure cmd key to be recognized as alt key
+# In terminals, esc + key combinations are recognized as alt + key
+# Therefore: cmd + key => esc + key => alt + key
+keybind = cmd+h=esc:h
+keybind = cmd+j=esc:j  
+keybind = cmd+k=esc:k
+keybind = cmd+l=esc:l
+keybind = cmd+shift+h=esc:H
+keybind = cmd+shift+j=esc:J  
+keybind = cmd+shift+k=esc:K
+keybind = cmd+shift+l=esc:L
+keybind = cmd+b=esc:b
+
