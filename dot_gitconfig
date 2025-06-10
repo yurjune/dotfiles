@@ -30,3 +30,8 @@
 	sta = stash apply
 [rerere]
 	enabled = false
+[color "diff"]
+	# catpuccin mocha green
+	new = "#a6e3a1"
+	# catpuccin mocha red
+	old = "#f38ba8"
