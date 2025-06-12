@@ -12,7 +12,7 @@ keybind = cmd+left=previous_tab
 keybind = cmd+right=next_tab
 keybind = ctrl+space=ignore
 
-macos-titlebar-style = transparent
+macos-titlebar-style = tabs 
 cursor-style = block
 shell-integration = zsh
 
