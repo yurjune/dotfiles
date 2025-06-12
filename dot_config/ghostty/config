@@ -36,5 +36,9 @@ keybind = cmd+shift+j=esc:J
 keybind = cmd+shift+k=esc:K
 keybind = cmd+shift+l=esc:L
 keybind = cmd+b=esc:b
-keybind = cmd+x=esc:x
+keybind = cmd+d=esc:d
+keybind = cmd+s=esc:s
+keybind = cmd+q=esc:q
+keybind = cmd+a=esc:a
+keybind = cmd+shift+d=esc:D
 
