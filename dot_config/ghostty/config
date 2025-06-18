@@ -38,7 +38,11 @@ keybind = cmd+shift+l=esc:L
 keybind = cmd+b=esc:b
 keybind = cmd+d=esc:d
 keybind = cmd+s=esc:s
-keybind = cmd+q=esc:q
+keybind = cmd+w=esc:w
+keybind = cmd+e=esc:e
+keybind = cmd+shift+e=esc:E
+keybind = cmd+shift+w=esc:W
+keybind = cmd+q=close_window
 keybind = cmd+a=esc:a
 keybind = cmd+shift+d=esc:D
 
