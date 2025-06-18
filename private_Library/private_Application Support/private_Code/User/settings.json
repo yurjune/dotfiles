@@ -30,6 +30,8 @@
   "editor.accessibilitySupport": "off",
   "editor.minimap.enabled": false,
   "search.smartCase": false,
+  // force english input method when switch to normal mode
+  // restore previous input method when switch to insert mode
   "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.ABC",
   "vim.autoSwitchInputMethod.obtainIMCmd": "/opt/homebrew/bin/im-select",
   "vim.autoSwitchInputMethod.switchIMCmd": "/opt/homebrew/bin/im-select {im}",
@@ -59,28 +61,16 @@
       "commands": ["editor.action.rename"]
     },
     {
-      "before": ["<leader>", "e", "e"],
-      "commands": ["workbench.action.toggleSidebarVisibility"]
-    },
-    {
-      "before": ["<leader>", "e", "f"],
-      "commands": ["workbench.view.explorer"]
+      "before": ["<leader>", "l", "g"],
+      "commands": ["workbench.view.scm"]
     },
     {
       "before": ["<leader>", "f", "f"],
       "commands": ["workbench.action.quickOpen"]
     },
     {
-      "before": ["<leader>", "f", "s"],
+      "before": ["<leader>", "f", "l"],
       "commands": ["workbench.view.search"]
-    },
-    {
-      "before": ["<leader>", "b", "n"],
-      "commands": ["workbench.action.nextEditor"]
-    },
-    {
-      "before": ["<leader>", "b", "p"],
-      "commands": ["workbench.action.prevEditor"]
     }
   ],
   "vim.insertModeKeyBindingsNonRecursive": [
