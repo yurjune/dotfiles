@@ -2,7 +2,7 @@
   "workbench.iconTheme": "vscode-icons",
   "workbench.settings.useSplitJSON": true,
   "workbench.tree.enableStickyScroll": false,
-  "workbench.colorTheme": "Halcyon",
+  "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.startupEditor": "none",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
@@ -13,17 +13,14 @@
   "editor.tabSize": 2,
   "editor.fontSize": 13,
   "editor.indentSize": "tabSize",
-  "editor.insertSpaces": true, // convert tab to space
+  "editor.insertSpaces": true,
   "editor.lineNumbers": "relative",
   "editor.autoIndent": "full",
   "editor.wordWrap": "off",
   "editor.stickyScroll.enabled": true,
   "editor.smoothScrolling": true,
   "editor.cursorBlinking": "smooth",
-  "editor.tokenColorCustomizations": {
-    "comments": "#bdfcc9" // Light Mint
-  },
-  "editor.cursorSurroundingLines": 4, // scroll offsets
+  "editor.cursorSurroundingLines": 4,
   "editor.cursorSurroundingLinesStyle": "all",
   "editor.folding": true,
   "editor.foldingStrategy": "auto",
@@ -37,7 +34,6 @@
   "vim.autoSwitchInputMethod.switchIMCmd": "/opt/homebrew/bin/im-select {im}",
   "vim.autoSwitchInputMethod.enable": true,
   "vim.foldfix": true,
-
   "vim.leader": "<space>",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
@@ -63,10 +59,6 @@
     {
       "before": ["<leader>", "l", "g"],
       "commands": ["workbench.view.scm"]
-    },
-    {
-      "before": ["<leader>", "f", "f"],
-      "commands": ["workbench.action.quickOpen"]
     },
     {
       "before": ["<leader>", "f", "l"],
