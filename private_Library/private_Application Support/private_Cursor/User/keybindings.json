@@ -1,76 +1,23 @@
 // Place your key bindings in this file to override the defaults
 [
-  {
-    "key": "cmd+r",
-    "command": "workbench.action.openRecent"
-  },
+  // disable some keymaps
   {
     "key": "ctrl+6",
     "command": "-extension.vim_ctrl+6"
   },
   {
-    "key": "ctrl+w",
-    "command": "-workbench.action.switchWindow"
+    "key": "cmd+o",
+    "command": "-workbench.action.files.openFile"
   },
   {
-    "key": "cmd+p",
-    "command": "-workbench.action.quickOpen"
-  },
-  // hjkl navigations
-  {
-    "key": "cmd+h",
-    "command": "workbench.action.focusLeftGroup",
-    "when": "activeEditorGroupIndex > 1"
+    "key": "cmd+o",
+    "command": "-workbench.action.files.openFileFolder"
   },
   {
-    "key": "cmd+h",
-    "command": "workbench.action.focusSideBar",
-    "when": "activeEditorGroupIndex == 1"
+    "key": "cmd+r",
+    "command": "workbench.action.openRecent"
   },
-  {
-    "key": "cmd+h",
-    "command": "workbench.action.focusLastEditorGroup",
-    "when": "sideBarFocus"
-  },
-  {
-    "key": "cmd+j",
-    "command": "workbench.action.focusBelowGroup"
-  },
-  {
-    "key": "cmd+k",
-    "command": "workbench.action.focusAboveGroup"
-  },
-  {
-    "key": "cmd+l",
-    "command": "workbench.action.focusRightGroup",
-    "when": "!sideBarFocus && !activeEditorGroupLast"
-  },
-  {
-    "key": "cmd+l",
-    "command": "workbench.action.focusSideBar",
-    "when": "!sideBarFocus && activeEditorGroupLast"
-  },
-  {
-    "key": "cmd+l",
-    "command": "workbench.action.focusFirstEditorGroup",
-    "when": "sideBarFocus"
-  },
-  // left panel
-  {
-    "key": "cmd+e",
-    "command": "workbench.view.explorer"
-  },
-  {
-    "key": "cmd+shift+e",
-    "command": "workbench.action.toggleSidebarVisibility"
-  },
-  // can open file by tab in file explorer
-  {
-    "key": "tab",
-    "command": "list.select",
-    "when": "explorerViewletFocus && !inputFocus"
-  },
-  // remove left panel teleport keymaps
+  // disable left panel teleport keymaps
   {
     "key": "cmd+shift+e",
     "command": "-workbench.view.explorer"
@@ -95,7 +42,24 @@
     "key": "cmd+shift+x",
     "command": "-workbench.view.extensions"
   },
-  // navigate buffers
+  // hjkl navigations
+  {
+    "key": "cmd+h",
+    "command": "workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "cmd+j",
+    "command": "workbench.action.focusBelowGroup"
+  },
+  {
+    "key": "cmd+k",
+    "command": "workbench.action.focusAboveGroup"
+  },
+  {
+    "key": "cmd+l",
+    "command": "workbench.action.focusRightGroup"
+  },
+  // buffer navigations
   {
     "key": "cmd+shift+h",
     "command": "workbench.action.previousEditor"
@@ -103,6 +67,12 @@
   {
     "key": "cmd+shift+l",
     "command": "workbench.action.nextEditor"
+  },
+  // can open file by tab in file explorer
+  {
+    "key": "tab",
+    "command": "list.select",
+    "when": "explorerViewletFocus && !inputFocus"
   },
   // closing editors
   {
@@ -116,9 +86,5 @@
   {
     "key": "cmd+j",
     "command": "-workbench.action.togglePanel"
-  },
-  {
-    "key": "cmd+p",
-    "command": "-workbench.action.quickOpen"
   }
 ]

@@ -20,9 +20,6 @@
   "editor.stickyScroll.enabled": true,
   "editor.smoothScrolling": true,
   "editor.cursorBlinking": "smooth",
-  "editor.tokenColorCustomizations": {
-    "comments": "#bdfcc9"
-  },
   "editor.cursorSurroundingLines": 4,
   "editor.cursorSurroundingLinesStyle": "all",
   "editor.folding": true,
@@ -60,10 +57,6 @@
     {
       "before": ["<leader>", "l", "g"],
       "commands": ["workbench.view.scm"]
-    },
-    {
-      "before": ["<leader>", "f", "f"],
-      "commands": ["workbench.action.quickOpen"]
     },
     {
       "before": ["<leader>", "f", "l"],
