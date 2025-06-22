@@ -65,8 +65,11 @@ alias tmux-source-all='for session in $(tmux list-sessions -F "#{session_name}")
 
 # cd
 alias cdn="cd ~/.config/nvim"
+alias cdg="cd ~/github"
 alias cdc="cd ~/.local/share/chezmoi"
 alias cdw="cd ~/github/classum-web"
+alias cdwm="cd ~/github/web-modules"
+alias cdo="cd ~/obsidian/jerry"
 
 # prevent kill shell by Ctrl-D
 setopt IGNORE_EOF
