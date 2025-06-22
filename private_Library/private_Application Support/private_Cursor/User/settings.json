@@ -49,6 +49,10 @@
       "commands": ["editor.action.showHover"]
     },
     {
+      "before": ["g", "r"],
+      "commands": ["editor.action.revealDefinition"]
+    },
+    {
       "before": ["<leader>", "d", "l"],
       "commands": ["editor.action.marker.next"]
     },
@@ -59,10 +63,6 @@
     {
       "before": ["<leader>", "l", "g"],
       "commands": ["workbench.view.scm"]
-    },
-    {
-      "before": ["<leader>", "f", "l"],
-      "commands": ["workbench.view.search"]
     }
   ],
   "vim.insertModeKeyBindingsNonRecursive": [

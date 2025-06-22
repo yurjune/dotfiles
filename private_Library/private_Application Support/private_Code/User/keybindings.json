@@ -17,18 +17,14 @@
     "key": "cmd+r",
     "command": "workbench.action.openRecent"
   },
+  {
+    "key": "cmd+shift+j",
+    "command": "search.action.focusSearchList"
+  },
   // disable left panel teleport keymaps
   {
     "key": "cmd+shift+e",
     "command": "-workbench.view.explorer"
-  },
-  {
-    "key": "cmd+shift+f",
-    "command": "-workbench.view.search"
-  },
-  {
-    "key": "cmd+shift+f",
-    "command": "-workbench.action.findInFiles"
   },
   {
     "key": "shift+ctrl+g",
@@ -46,7 +42,7 @@
   {
     "key": "cmd+h",
     "command": "workbench.action.focusLeftGroup",
-    "when": "activeEditorGroupIndex > 1"
+    "when": "editorFocus"
   },
   {
     "key": "cmd+h",
@@ -56,7 +52,7 @@
   {
     "key": "cmd+h",
     "command": "workbench.action.focusLastEditorGroup",
-    "when": "sideBarFocus"
+    "when": "!editorFocus"
   },
   {
     "key": "cmd+j",
@@ -69,17 +65,17 @@
   {
     "key": "cmd+l",
     "command": "workbench.action.focusRightGroup",
-    "when": "!sideBarFocus && !activeEditorGroupLast"
+    "when": "editorFocus && !activeEditorGroupLast"
   },
   {
     "key": "cmd+l",
     "command": "workbench.action.focusSideBar",
-    "when": "!sideBarFocus && activeEditorGroupLast"
+    "when": "editorFocus && activeEditorGroupLast"
   },
   {
     "key": "cmd+l",
     "command": "workbench.action.focusFirstEditorGroup",
-    "when": "sideBarFocus"
+    "when": "!editorFocus"
   },
   // buffer navigation
   {
@@ -90,11 +86,19 @@
     "key": "cmd+shift+l",
     "command": "workbench.action.nextEditor"
   },
-  // can open file by tab in file explorer
+  {
+    "key": "cmd+e",
+    "command": "workbench.view.explorer"
+  },
   {
     "key": "tab",
-    "command": "list.select",
-    "when": "explorerViewletFocus && !inputFocus"
+    "command": "list.toggleExpand",
+    "when": "explorerViewletFocus && !inputFocus && listFocus"
+  },
+  {
+    "key": "tab",
+    "command": "filesExplorer.openFilePreserveFocus",
+    "when": "explorerViewletFocus && !inputFocus && !listFocus"
   },
   // closing editors
   {

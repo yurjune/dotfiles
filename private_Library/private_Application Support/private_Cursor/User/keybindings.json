@@ -17,18 +17,14 @@
     "key": "cmd+r",
     "command": "workbench.action.openRecent"
   },
+  {
+    "key": "cmd+shift+j",
+    "command": "search.action.focusSearchList"
+  },
   // disable left panel teleport keymaps
   {
     "key": "cmd+shift+e",
     "command": "-workbench.view.explorer"
-  },
-  {
-    "key": "cmd+shift+f",
-    "command": "-workbench.view.search"
-  },
-  {
-    "key": "cmd+shift+f",
-    "command": "-workbench.action.findInFiles"
   },
   {
     "key": "shift+ctrl+g",
@@ -45,7 +41,18 @@
   // hjkl navigations
   {
     "key": "cmd+h",
-    "command": "workbench.action.focusLeftGroup"
+    "command": "workbench.action.focusLeftGroup",
+    "when": "editorFocus"
+  },
+  {
+    "key": "cmd+h",
+    "command": "workbench.action.focusSideBar",
+    "when": "activeEditorGroupIndex == 1"
+  },
+  {
+    "key": "cmd+h",
+    "command": "workbench.action.focusLastEditorGroup",
+    "when": "!editorFocus"
   },
   {
     "key": "cmd+j",
@@ -57,7 +64,18 @@
   },
   {
     "key": "cmd+l",
-    "command": "workbench.action.focusRightGroup"
+    "command": "workbench.action.focusRightGroup",
+    "when": "editorFocus && !activeEditorGroupLast"
+  },
+  {
+    "key": "cmd+l",
+    "command": "workbench.action.focusSideBar",
+    "when": "editorFocus && activeEditorGroupLast"
+  },
+  {
+    "key": "cmd+l",
+    "command": "workbench.action.focusFirstEditorGroup",
+    "when": "!editorFocus"
   },
   // buffer navigations
   {
@@ -68,11 +86,19 @@
     "key": "cmd+shift+l",
     "command": "workbench.action.nextEditor"
   },
-  // can open file by tab in file explorer
+  {
+    "key": "cmd+e",
+    "command": "workbench.view.explorer"
+  },
   {
     "key": "tab",
-    "command": "list.select",
-    "when": "explorerViewletFocus && !inputFocus"
+    "command": "list.toggleExpand",
+    "when": "explorerViewletFocus && !inputFocus && listFocus"
+  },
+  {
+    "key": "tab",
+    "command": "filesExplorer.openFilePreserveFocus",
+    "when": "explorerViewletFocus && !inputFocus && !listFocus"
   },
   // closing editors
   {
