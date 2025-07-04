@@ -47,3 +47,6 @@ keybind = cmd+a=esc:a
 keybind = cmd+n=esc:n
 keybind = cmd+shift+d=esc:D
 
+# for scroll
+keybind = shift+page_up=scroll_page_up
+keybind = shift+page_down=scroll_page_down
