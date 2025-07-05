@@ -50,3 +50,5 @@ keybind = cmd+shift+d=esc:D
 # for scroll
 keybind = shift+page_up=scroll_page_up
 keybind = shift+page_down=scroll_page_down
+
+keybind = shift+enter=text:\n
