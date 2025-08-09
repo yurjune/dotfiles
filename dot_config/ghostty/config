@@ -1,7 +1,6 @@
 # press cmd+shift+, to apply config
-title = "Ghostty"
 
-font-size = 11
+font-size = 10
 # if -calt, disables ligature
 # font-feature = -calt
 
