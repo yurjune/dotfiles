@@ -1,4 +1,4 @@
--- Switch input source to English when using a specific app.
+-- Switch input source to English when focused on a specific app.
 
 local englishInputSource = "ABC"
 local targetApps = {
