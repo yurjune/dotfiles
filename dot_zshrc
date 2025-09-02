@@ -72,6 +72,9 @@ alias cdw="cd ~/github/classum-web"
 alias cdwm="cd ~/github/web-modules"
 alias cdo="cd ~/obsidian/jerry"
 
+alias claude-usage="COLUMNS=200 bunx ccusage -s $(date +%Y%m01) -u $(date +%Y%m99) | grep -E \"(Date.*Models|Total)\""
+alias claude-usage-last="COLUMNS=200 bunx ccusage -s $(date -v-1m +%Y%m01) -u $(date -v-1m +%Y%m99) | grep -E \"(Date.*Models|Total)\""
+
 # prevent kill shell by Ctrl-D
 setopt IGNORE_EOF
 
