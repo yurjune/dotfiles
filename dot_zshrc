@@ -54,6 +54,7 @@ alias lg="lazygit"
 alias ch="chezmoi"
 
 # tmux aliases
+alias tml="tmux ls"
 alias tmn="tmux new -s"
 alias tmN="tmux new"
 alias tma="tmux attach"
@@ -71,6 +72,8 @@ alias cdc="cd ~/.local/share/chezmoi"
 alias cdw="cd ~/github/classum-web"
 alias cdwm="cd ~/github/web-modules"
 alias cdo="cd ~/obsidian/jerry"
+
+alias npms="npm run start:dev"
 
 alias claude-usage="COLUMNS=200 bunx ccusage -s $(date +%Y%m01) -u $(date +%Y%m99) | grep -E \"(Date.*Models|Total)\""
 alias claude-usage-last="COLUMNS=200 bunx ccusage -s $(date -v-1m +%Y%m01) -u $(date -v-1m +%Y%m99) | grep -E \"(Date.*Models|Total)\""
