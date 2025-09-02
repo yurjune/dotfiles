@@ -92,3 +92,10 @@ export NVM_DIR="$HOME/.nvm"
 if [ -f ~/.zshrc.local ]; then
     source ~/.zshrc.local
 fi
+
+# bun completions
+[ -s "/Users/jerry/.bun/_bun" ] && source "/Users/jerry/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
