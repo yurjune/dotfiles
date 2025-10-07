@@ -47,6 +47,7 @@ export LANG=en_US.UTF-8
 alias cls="clear"
 
 alias nv="nvim"
+alias nvdb="nvim -c \"autocmd VimEnter * Dbee\""
 alias nvv="neovide"
 alias nvvm="neovide -- --cmd 'let g:markdown_mode = 1'"
 
@@ -70,6 +71,7 @@ alias cdn="cd ~/.config/nvim"
 alias cdg="cd ~/github"
 alias cdc="cd ~/.local/share/chezmoi"
 alias cdw="cd ~/github/classum-web"
+alias cds="cd ~/github/telta-web"
 alias cdwm="cd ~/github/web-modules"
 alias cdo="cd ~/obsidian/jerry"
 
