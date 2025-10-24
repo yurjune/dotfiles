@@ -79,7 +79,8 @@
     }
   ],
   "javascript.preferences.useAliasesForRenames": false,
-  "typescript.updateImportsOnFileMove.enabled": "prompt",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.preferences.useAliasesForRenames": false,
   "typescript.inlayHints.enumMemberValues.enabled": true,
   "typescript.inlayHints.parameterTypes.enabled": true,
