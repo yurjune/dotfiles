@@ -3,6 +3,8 @@ export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
 export PATH="/usr/local/opt/python@3.10/bin:$PATH"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PYTHON="/usr/local/opt/python@3.10/bin/python3"
+# export PATH="/opt/homebrew/opt/mysql/bin:$PATH"
+export PATH="/opt/homebrew/opt/mysql@8.4/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -66,16 +68,13 @@ alias tmK="tmux kill-server"
 # apply source ~/.zshrc to all tmux panes
 alias tmux-source-all='for session in $(tmux list-sessions -F "#{session_name}"); do for window in $(tmux list-windows -t "$session" -F "#{window_index}"); do for pane in $(tmux list-panes -t "$session:$window" -F "#{pane_index}"); do tmux send-keys -t "$session:$window.$pane" "source ~/.zshrc" Enter; done; done; done'
 
+alias zshs="source ~/.zshrc"
+
 # cd
 alias cdn="cd ~/.config/nvim"
-alias cdg="cd ~/github"
+alias cdns="cd ~/.local/share/nvim"
 alias cdc="cd ~/.local/share/chezmoi"
-alias cdw="cd ~/github/classum-web"
-alias cds="cd ~/github/telta-web"
-alias cdwm="cd ~/github/web-modules"
 alias cdo="cd ~/obsidian/jerry"
-
-alias npms="npm run start:dev"
 
 alias claude-usage="COLUMNS=200 bunx ccusage -s $(date +%Y%m01) -u $(date +%Y%m99) | grep -E \"(Date.*Models|Total)\""
 alias claude-usage-last="COLUMNS=200 bunx ccusage -s $(date -v-1m +%Y%m01) -u $(date -v-1m +%Y%m99) | grep -E \"(Date.*Models|Total)\""
