@@ -40,6 +40,8 @@ keybind = cmd+d=esc:d
 keybind = cmd+s=esc:s
 keybind = cmd+w=esc:w
 keybind = cmd+e=esc:e
+keybind = cmd+g=esc:g
+keybind = cmd+p=esc:p
 keybind = cmd+shift+e=esc:E
 keybind = cmd+shift+w=esc:W
 keybind = cmd+q=close_window
