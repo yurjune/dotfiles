@@ -4,8 +4,8 @@ font-size = 10
 # if -calt, disables ligature
 # font-feature = -calt
 
-background-opacity = 1
-background-blur = 15
+background-opacity = 0
+background-blur = 20
 
 keybind = cmd+left=previous_tab
 keybind = cmd+right=next_tab
