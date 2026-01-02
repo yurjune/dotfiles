@@ -68,11 +68,14 @@ alias tmK="tmux kill-server"
 # apply source ~/.zshrc to all tmux panes
 alias tmux-source-all='for session in $(tmux list-sessions -F "#{session_name}"); do for window in $(tmux list-windows -t "$session" -F "#{window_index}"); do for pane in $(tmux list-panes -t "$session:$window" -F "#{pane_index}"); do tmux send-keys -t "$session:$window.$pane" "source ~/.zshrc" Enter; done; done; done'
 
+alias zshn="nvim ~/.zshrc"
 alias zshs="source ~/.zshrc"
 
 # cd
 alias cdn="cd ~/.config/nvim"
 alias cdns="cd ~/.local/share/nvim"
+alias cdnp="cd ~/.local/share/nvim/site/pack/core/opt/" # neovim plugins dir
+
 alias cdc="cd ~/.local/share/chezmoi"
 alias cdo="cd ~/obsidian/jerry"
 alias cdg="cd ~/github"
