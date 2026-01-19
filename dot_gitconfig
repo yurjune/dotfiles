@@ -6,11 +6,6 @@
 	excludesfile = /Users/jerry/.gitignore_global
 [commit]
 	template = /Users/jerry/.stCommitMsg
-[credential]
-	username = jerry-classum
-[user]
-	name = Jerry
-	email = jerry@classum.com
 [alias]
 	lg = log -1000
 	lo = log --oneline -1000
@@ -35,3 +30,6 @@
 	new = "#a6e3a1"
 	# catpuccin mocha red
 	old = "#f38ba8"
+[user]
+	name = yurjune
+	email = yurjune@naver.com
