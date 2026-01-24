@@ -23,33 +23,20 @@ adjust-cell-height = 10%
 
 macos-option-as-alt = true
 
-# Make cmd key to be recognized as meta key
-# - cmd key is unavailable on terminal 
-# - esc + key combinations are recognized as meta + key
+# ESC sequence is recognized as meta key in terminal
 # Therefore: cmd + key => esc + key => meta + key
+# For tmux usage
 keybind = cmd+h=esc:h
 keybind = cmd+j=esc:j  
 keybind = cmd+k=esc:k
 keybind = cmd+l=esc:l
-keybind = cmd+shift+h=esc:H
-keybind = cmd+shift+j=esc:J  
-keybind = cmd+shift+k=esc:K
-keybind = cmd+shift+l=esc:L
-keybind = cmd+b=esc:b
-keybind = cmd+d=esc:d
+
+# For neovim usage
+keybind = cmd+a=esc:a
 keybind = cmd+s=esc:s
 keybind = cmd+w=esc:w
-keybind = cmd+e=esc:e
-keybind = cmd+g=esc:g
-keybind = cmd+p=esc:p
-keybind = cmd+c=esc:c
-keybind = cmd+v=esc:v
-keybind = cmd+shift+e=esc:E
 keybind = cmd+shift+w=esc:W
 keybind = cmd+q=close_window
-keybind = cmd+a=esc:a
-keybind = cmd+n=esc:n
-keybind = cmd+shift+d=esc:D
 
 # for scroll
 keybind = shift+page_up=scroll_page_up
