@@ -60,6 +60,8 @@ alias nvvm="neovide -- --cmd 'let g:markdown_mode = 1'"
 alias lg="lazygit"
 alias ch="chezmoi"
 
+alias brewdump="brew bundle dump --force --file=~/.Brewfile"
+
 # tmux aliases
 alias tml="tmux ls"
 alias tmn="tmux new -s"
