@@ -1,25 +1,24 @@
 # press cmd+shift+, to apply config
 
+theme = Catppuccin Mocha
+
 font-size = 10
 # if -calt, disables ligature
 # font-feature = -calt
 
+# adjust text cell height => adjust line height
+adjust-cell-height = 25%
+cursor-style = block
+
+macos-titlebar-style = tabs 
+
 background-opacity = 0
 background-blur = 20
 
-keybind = cmd+left=previous_tab
-keybind = cmd+right=next_tab
-keybind = ctrl+space=ignore
-
-macos-titlebar-style = tabs 
-cursor-style = block
 shell-integration = zsh
 
 # when you drag any text, copy it immediately
 copy-on-select = clipboard
-
-# adjust text cell height => adjust line height
-adjust-cell-height = 25%
 
 macos-option-as-alt = true
 
@@ -37,10 +36,15 @@ keybind = cmd+s=esc:s
 keybind = cmd+w=esc:w
 keybind = cmd+n=esc:n
 keybind = cmd+shift+w=esc:W
-keybind = cmd+q=close_window
+
+keybind = cmd+q=close_tab
+keybind = cmd+left=previous_tab
+keybind = cmd+right=next_tab
+keybind = ctrl+space=ignore
 
 # for scroll
 keybind = shift+page_up=scroll_page_up
 keybind = shift+page_down=scroll_page_down
 
 keybind = shift+enter=text:\n
+
