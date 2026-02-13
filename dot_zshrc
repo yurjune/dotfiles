@@ -4,6 +4,7 @@ export PATH="/usr/local/opt/python@3.10/bin:$PATH"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PYTHON="/usr/local/opt/python@3.10/bin/python3"
 export PATH="/opt/homebrew/opt/mysql@8.4/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
 
 # LLVM
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
