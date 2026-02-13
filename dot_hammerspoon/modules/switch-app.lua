@@ -7,5 +7,6 @@ hs.hotkey.bind({ "ctrl" }, "2", function()
 end)
 
 hs.hotkey.bind({ "ctrl" }, "3", function()
-	hs.application.launchOrFocus("Claude") -- Claude Desktop
+	-- hs.application.launchOrFocus("Claude") -- Claude Desktop
+	hs.application.launchOrFocus("ChatGPT") -- ChatGPT Desktop
 end)
