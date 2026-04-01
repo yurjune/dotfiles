@@ -1,4 +1,5 @@
 require("modules.ctrl-hjkl")
+require("modules.ctrl-b")
 require("modules.switch-input-source")
 require("modules.ghostty-input-hotkey")
 -- require("modules.switch-desktop")
