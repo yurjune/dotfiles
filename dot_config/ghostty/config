@@ -3,6 +3,8 @@
 theme = Catppuccin Mocha
 
 font-size = 10
+font-family = "JetBrainsMono Nerd Font Mono"
+font-family = "Apple SD Gothic Neo"
 # if -calt, disables ligature
 # font-feature = -calt
 
