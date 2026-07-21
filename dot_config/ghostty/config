@@ -36,8 +36,9 @@ keybind = cmd+l=esc:l
 keybind = cmd+a=esc:a
 keybind = cmd+s=esc:s
 keybind = cmd+w=esc:w
-keybind = cmd+n=esc:n
 keybind = cmd+shift+w=esc:W
+keybind = cmd+shift+h=esc:H
+keybind = cmd+shift+l=esc:L  
 
 keybind = cmd+q=close_tab
 keybind = cmd+left=previous_tab
