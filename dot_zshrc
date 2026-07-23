@@ -71,13 +71,21 @@ alias tmuxs='for session in $(tmux list-sessions -F "#{session_name}"); do for w
 alias zshn="nvim ~/.zshrc"
 alias zshs="source ~/.zshrc"
 
+alias squiz="cd ~/github/sql-quiz && codex \"start quiz\""
+
 # cd
 alias cdn="cd ~/.config/nvim"
+alias cdm="cd ~/memo"
 alias cdns="cd ~/.local/share/nvim"
 
 alias cdc="cd ~/.local/share/chezmoi"
 alias cdo="cd ~/obsidian/jerry"
 alias cdg="cd ~/github"
+
+alias cdon="cd ~/github/GBSOFT_GBON_WebFE/"
+alias cdcl="cd ~/github/GBSOFT_WebFE_Client/"
+alias cdgl="cd ~/github/GBSOFT_WebFE_Global/"
+alias cdho="cd ~/github/GBSOFT_WebFE_hoban/"
 
 alias claude-usage="COLUMNS=200 bunx ccusage -s $(date +%Y%m01) -u $(date +%Y%m99) | grep -E \"(Date.*Models|Total)\""
 alias claude-usage-last="COLUMNS=200 bunx ccusage -s $(date -v-1m +%Y%m01) -u $(date -v-1m +%Y%m99) | grep -E \"(Date.*Models|Total)\""
