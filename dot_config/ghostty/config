@@ -14,8 +14,14 @@ cursor-style = block
 
 macos-titlebar-style = tabs 
 
-background-opacity = 0
-background-blur = 20
+# for transparent background
+# background-opacity = 0
+# background-blur = 20
+
+# for non-transparent background
+background-image = ~/wallpapers/wallpaper.jpg
+background-image-fit = cover
+background-opacity = 1
 
 shell-integration = zsh
 
