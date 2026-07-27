@@ -13,4 +13,4 @@ local function remap(mods, key, pressFn)
 	hs.hotkey.bind(mods, key, pressFn, nil, pressFn)
 end
 
-remap({ "ctrl" }, "b", pressFn("delete"))
+-- remap({ "ctrl" }, "b", pressFn("delete"))
