@@ -8,19 +8,23 @@ local lastInputSource = nil
 
 local M = {}
 
-function M.leaveInsert()
+function M.saveCurrentSource()
 	lastInputSource = hs.keycodes.currentSourceID()
-	hs.keycodes.currentSourceID(englishInputSource)
 end
 
-function M.enterInsert()
-	if lastInputSource and lastInputSource ~= englishInputSource then
+function M.restoreSavedSource()
+	if lastInputSource then
 		hs.keycodes.currentSourceID(lastInputSource)
 	end
 end
 
 function M.switchToEnglish()
 	hs.keycodes.currentSourceID(englishInputSource)
+end
+
+function M.saveSourceAndSwitchToEnglish()
+	M.saveCurrentSource()
+	M.switchToEnglish()
 end
 
 -- Expose the module to commands evaluated by the `hs` CLI.
