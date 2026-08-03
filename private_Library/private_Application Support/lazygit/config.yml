@@ -23,3 +23,6 @@ gui:
 
   authorColors:
     "*": "#74c7ec"
+git:
+  # prevent auto fast-forward on branch checkout
+  autoForwardBranches: none
