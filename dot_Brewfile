@@ -1,76 +1,152 @@
-tap "1password/tap"
-tap "daipeihust/tap"
-tap "jandedobbeleer/oh-my-posh"
-tap "jerry/neovim-versions"
+tap "jandedobbeleer/oh-my-posh", trusted: { casks: ["oh-my-posh"] }
 tap "jesseduffield/lazygit"
+tap "yhpark/local-tap"
+# Run your GitHub Actions locally
 brew "act"
-brew "giflib"
+# General-purpose data compression with high compression ratio
 brew "xz"
+# Official Amazon AWS command-line interface
 brew "awscli"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# Resource monitor. C++ version and continuation of bashtop and bpytop
+brew "btop"
+# Incredibly fast JavaScript runtime, bundler, test runner, and package manager
+brew "bun"
+# XML-based font configuration API for X Windows
 brew "fontconfig"
+# Vector graphics library with cross-device output support
 brew "cairo"
+# Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
-brew "clang-format"
+# Cross-platform make
 brew "cmake"
+# Pack, ship and run any application as a lightweight container
 brew "docker"
-brew "fastfetch"
+# Simple, fast and user-friendly alternative to find
 brew "fd"
+# Command-line fuzzy finder written in Go
 brew "fzf"
+# GitHub command-line tool
 brew "gh"
+# Library and utilities for processing GIFs
+brew "giflib"
+# Distributed revision control system
 brew "git"
+# Open source programming language to build simple/reliable/efficient software
 brew "go"
-brew "htop"
+# Tools and libraries to manipulate images in select formats
 brew "imagemagick"
+# Image manipulation library
 brew "jpeg"
+# Lightweight and flexible command-line JSON processor
 brew "jq"
+# Lazier way to manage everything docker
 brew "lazydocker"
+# Simple terminal UI for git commands
 brew "lazygit"
+# Framework for layout and rendering of i18n text
 brew "pango"
+# Library to render SVG files using Cairo
 brew "librsvg"
-brew "llvm"
+# Package manager for the Lua programming language
 brew "luarocks"
+# Drop-in replacement for MySQL
+brew "mariadb", restart_service: :changed
+# MariaDB database connector for C applications
+brew "mariadb-connector-c"
+# Open source relational database management system
 brew "mysql-client"
-brew "mysql@8.4"
-brew "neovim", args: ["HEAD"]
+# Incremental parsing library
+brew "tree-sitter"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim", link: false
+# Port scanning utility for large networks
 brew "nmap"
-brew "openjdk@21"
+# Manage multiple Node.js versions
+brew "nvm"
+# Prompt theme engine for any shell
+brew "oh-my-posh"
+# Swiss-army knife of markup format conversion
 brew "pandoc"
+# Package compiler and linker metadata toolkit
 brew "pkgconf"
+# Fast, disk space efficient package manager
 brew "pnpm"
+# Python version management
 brew "pyenv"
+# Interpreted, interactive, object-oriented programming language
 brew "python@3.10"
+# Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Safe, concurrent, practical language
 brew "rust"
+# Rust toolchain installer
 brew "rustup"
+# Open source continuous file synchronization application
 brew "syncthing"
+# Terminal multiplexer
 brew "tmux"
+# Command-line interface to the freedesktop.org trashcan
 brew "trash-cli"
+# Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Parser generator tool
+brew "tree-sitter-cli"
+# Internet file retriever
 brew "wget"
+# JavaScript package manager
 brew "yarn"
+# UNIX shell (command interpreter)
 brew "zsh"
+# Fish-like fast/unobtrusive autosuggestions for zsh
+brew "zsh-autosuggestions"
+# Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-brew "daipeihust/tap/im-select"
-brew "jandedobbeleer/oh-my-posh/oh-my-posh"
-cask "1password-cli"
+# Chromium based browser
 cask "arc"
+# Anthropic's official Claude AI desktop app
 cask "claude"
+# Terminal-based AI coding assistant
+cask "claude-code"
+# OpenAI's coding agent that runs in your terminal
 cask "codex"
+# Write, edit, and chat about your code with AI
 cask "cursor"
+# App to build and share containerised applications and microservices
+cask "docker-desktop"
+# Collaborative team software
 cask "figma"
 cask "font-jetbrains-mono-nerd-font"
+# Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Web browser
 cask "google-chrome"
+# Libhangul-based keyboard input
 cask "gureumkim"
+# Desktop automation application
 cask "hammerspoon"
+# Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Keyboard customiser
+cask "karabiner-elements"
+# Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
+# App to write, plan, collaborate, and get organised
 cask "notion"
+# Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Collaboration platform for API development
 cask "postman"
+# Control your tools with a few keystrokes
 cask "raycast"
+# Tool to reverse the direction of scrolling
 cask "scroll-reverser"
+# Team communication and collaboration software
 cask "slack"
+# SSH client
+cask "termius"
+# Open-source code editor
 cask "visual-studio-code"
 vscode "adpyke.codesnap"
 vscode "alefragnani.bookmarks"
@@ -85,8 +161,6 @@ vscode "eamodio.gitlens"
 vscode "ecmel.vscode-html-css"
 vscode "esbenp.prettier-vscode"
 vscode "formulahendry.auto-rename-tag"
-vscode "github.copilot"
-vscode "github.copilot-chat"
 vscode "github.vscode-github-actions"
 vscode "magicstack.magicpython"
 vscode "mechatroner.rainbow-csv"
@@ -101,6 +175,7 @@ vscode "ms-toolsai.jupyter-renderers"
 vscode "ms-toolsai.vscode-jupyter-cell-tags"
 vscode "ms-toolsai.vscode-jupyter-slideshow"
 vscode "ms-vscode.cmake-tools"
+vscode "ms-vscode.cpp-devtools"
 vscode "ms-vscode.cpptools"
 vscode "ms-vscode.cpptools-extension-pack"
 vscode "ms-vscode.cpptools-themes"
@@ -125,4 +200,7 @@ vscode "vscodevim.vim"
 vscode "xabikos.javascriptsnippets"
 vscode "yoavbls.pretty-ts-errors"
 vscode "zignd.html-css-class-completion"
-cargo "code-minimap"
+npm "corepack"
+npm "pm2"
+npm "pnpm"
+npm "sql-formatter"
