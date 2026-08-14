@@ -60,7 +60,7 @@ alias brewdump="brew bundle dump --force --file=~/.Brewfile"
 alias tml="tmux ls"
 alias tmn="tmux new -s"
 alias tmN="tmux new"
-alias tma="tmux attach"
+alias tma="tmux attach -t"
 alias tmd="tmux detach"
 alias tmk="tmux kill-session"
 alias tmkt="tmux kill-session -t"
@@ -75,11 +75,11 @@ alias squiz="cd ~/github/sql-quiz && codex \"start quiz\""
 
 # cd
 alias cdn="cd ~/.config/nvim"
-alias cdm="cd ~/memo"
 alias cdns="cd ~/.local/share/nvim"
 
 alias cdc="cd ~/.local/share/chezmoi"
-alias cdo="cd ~/obsidian/jerry"
+alias cdo="cd ~/obsidian/Jerry"
+alias cdm="cd ~/obsidian/yhpark"
 alias cdg="cd ~/github"
 
 alias cdon="cd ~/github/GBSOFT_GBON_WebFE/"
