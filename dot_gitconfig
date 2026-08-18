@@ -33,3 +33,5 @@
 [user]
 	name = yhpark-gb
 	email = yhpark@gb-soft.co.kr
+[diff]
+	algorithm = histogram
