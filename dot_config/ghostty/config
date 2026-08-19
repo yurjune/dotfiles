@@ -51,6 +51,12 @@ keybind = cmd+left=previous_tab
 keybind = cmd+right=next_tab
 keybind = ctrl+space=ignore
 
+# 한글 입력일 때 Ctrl+key 가 안되는 문제를 해결
+keybind = ctrl+key_e=text:\x05
+keybind = ctrl+key_c=text:\x03
+keybind = ctrl+key_t=text:\x14
+keybind = ctrl+key_d=text:\x04
+
 # for scroll
 keybind = shift+page_up=scroll_page_up
 keybind = shift+page_down=scroll_page_down
