@@ -13,6 +13,7 @@ export PYTHON="$HOMEBREW_PREFIX/opt/python@3.10/bin/python3"
 
 export PATH="$HOMEBREW_PREFIX/opt/mysql@8.4/bin:$PATH"
 export PATH="$HOMEBREW_PREFIX/opt/postgresql@17/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/openjdk@17/bin:$PATH"
 
 # LLVM
 export PATH="$HOMEBREW_PREFIX/opt/llvm/bin:$PATH"
