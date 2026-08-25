@@ -1,8 +1,10 @@
 ## Homebrew
-if [[ "$(uname -m)" == "arm64" ]]; then
-  export HOMEBREW_PREFIX="/opt/homebrew"
-else
+[[ "$(uname -m)" == "arm64" ]] && IS_INTEL=false || IS_INTEL=true
+
+if [[ "$IS_INTEL" == "true" ]]; then
   export HOMEBREW_PREFIX="/usr/local"
+else
+  export HOMEBREW_PREFIX="/opt/homebrew"
 fi
 export PATH="$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH"
 
@@ -10,10 +12,10 @@ export PATH="$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH"
 export PATH="$HOMEBREW_PREFIX/opt/python@3.10/bin:$PATH"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PYTHON="$HOMEBREW_PREFIX/opt/python@3.10/bin/python3"
+export PATH="$HOMEBREW_PREFIX/opt/openjdk/bin:$PATH"
 
 export PATH="$HOMEBREW_PREFIX/opt/mysql@8.4/bin:$PATH"
 export PATH="$HOMEBREW_PREFIX/opt/postgresql@17/bin:$PATH"
-export PATH="$HOMEBREW_PREFIX/opt/openjdk@17/bin:$PATH"
 
 # LLVM
 export PATH="$HOMEBREW_PREFIX/opt/llvm/bin:$PATH"
@@ -87,6 +89,11 @@ alias cdon="cd ~/github/GBSOFT_GBON_WebFE/"
 alias cdcl="cd ~/github/GBSOFT_WebFE_Client/"
 alias cdgl="cd ~/github/GBSOFT_WebFE_Global/"
 alias cdho="cd ~/github/GBSOFT_WebFE_hoban/"
+if [[ "$IS_INTEL" == "true" ]]; then
+  alias cdbe="cd ~/github/GBSOFT_GBPLATFORM_BE/"
+else
+  alias cdbe="cd ~/github/gbsoft/GBSOFT_GBPLATFORM_BE/"
+fi
 
 alias claude-usage="COLUMNS=200 bunx ccusage -s $(date +%Y%m01) -u $(date +%Y%m99) | grep -E \"(Date.*Models|Total)\""
 alias claude-usage-last="COLUMNS=200 bunx ccusage -s $(date -v-1m +%Y%m01) -u $(date -v-1m +%Y%m99) | grep -E \"(Date.*Models|Total)\""
