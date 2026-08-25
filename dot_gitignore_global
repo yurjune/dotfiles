@@ -1,0 +1,8 @@
+*~
+.DS_Store
+
+# Eclipse / JDT LS metadata
+.classpath
+.project
+.settings/
+.factorypath
