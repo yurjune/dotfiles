@@ -6,3 +6,6 @@
 .project
 .settings/
 .factorypath
+
+# Neovim
+nvim.log

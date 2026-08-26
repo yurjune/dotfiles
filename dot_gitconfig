@@ -3,9 +3,9 @@
 [push]
 	autoSetupRemote = true
 [core]
-	excludesfile = /Users/jerry/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [commit]
-	template = /Users/jerry/.stCommitMsg
+	template = ~/.stCommitMsg
 [alias]
 	lg = log -1000
 	lo = log --oneline -1000
