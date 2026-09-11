@@ -85,6 +85,9 @@ alias cdo="cd ~/obsidian/Jerry"
 alias cdm="cd ~/obsidian/yhpark"
 alias cdg="cd ~/github"
 
+alias codex="command codex --dangerously-bypass-approvals-and-sandbox"
+alias claude="command claude --dangerously-skip-permissions"
+
 alias cdon="cd ~/github/GBSOFT_GBON_WebFE/"
 alias cdcl="cd ~/github/GBSOFT_WebFE_Client/"
 alias cdgl="cd ~/github/GBSOFT_WebFE_Global/"
