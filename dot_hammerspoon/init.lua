@@ -1,6 +1,7 @@
 require("modules.alternate-arrow-keys")
 require("modules.alternate-backward-delete")
 require("modules.input-source-app-focus")
+require("modules.input-source-ghostty-control")
 require("modules.input-source-ghostty-hotkey")
 require("modules.input-source-nvim")
 -- require("modules.switch-desktop")
