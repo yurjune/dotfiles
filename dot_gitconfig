@@ -30,9 +30,6 @@
 	new = "#a6e3a1"
 	# catpuccin mocha red
 	old = "#f38ba8"
-[user]
-	name = yhpark-gb
-	email = yhpark@gb-soft.co.kr
 [diff]
 	algorithm = histogram
 [fetch]
