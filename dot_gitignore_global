@@ -9,3 +9,5 @@
 
 # Neovim
 nvim.log
+
+**/.claude/settings.local.json
