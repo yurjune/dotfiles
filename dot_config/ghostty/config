@@ -2,7 +2,7 @@
 
 theme = Catppuccin Mocha
 
-font-size = 10
+font-size = 15
 font-family = "JetBrainsMono Nerd Font Mono"
 font-family = "Apple SD Gothic Neo"
 # if -calt, disables ligature
@@ -13,15 +13,6 @@ adjust-cell-height = 25%
 cursor-style = block
 
 macos-titlebar-style = tabs 
-
-# for transparent background
-# background-opacity = 0
-# background-blur = 20
-
-# for non-transparent background
-background-image = ~/wallpapers/wallpaper.jpg
-background-image-fit = cover
-background-opacity = 1
 
 shell-integration = zsh
 
@@ -57,3 +48,15 @@ keybind = shift+page_down=scroll_page_down
 
 keybind = shift+enter=text:\n
 
+# Local-only file: ~/.config/ghostty/config.local (not managed by chezmoi).
+# Copy the settings you need from these examples into that file.
+# Transparent background:
+# background-opacity = 0
+# background-blur = 20
+
+# Background image:
+# background-image = ~/wallpapers/wallpaper.jpg
+# background-image-fit = cover
+# background-opacity = 1
+
+config-file = ?config.local
