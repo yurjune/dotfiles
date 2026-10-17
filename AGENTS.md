@@ -13,4 +13,5 @@
   Do not force, merge, or roll back the changes. Report the situation and wait for the user to review it before proceeding.
 - If `chezmoi re-add` encounters a conflict, report it to the user. Do not take further action in chezmoi to resolve it.
 - Make configuration changes in chezmoi source files; treat them as the source of truth.
+- Do not modify README.md.
 - After completing and committing the changes, run `chezmoi apply` to synchronize managed files to this system.
