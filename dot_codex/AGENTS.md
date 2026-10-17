@@ -1,3 +1,6 @@
 # Shared Agent Instructions
 
-Placeholder for shared Codex and Claude instructions.
+## 작업 완료와 커밋
+
+- 파일 변경 작업을 마치면 변경 사항과 수행한 검증을 요약하고 커밋 메시지를 제안합니다.
+- 사용자가 변경 사항을 검토하고 수락하면 커밋하고, 다음 작업이 있다면 이어서 진행합니다.
