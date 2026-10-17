@@ -15,3 +15,7 @@
 - Make configuration changes in chezmoi source files; treat them as the source of truth.
 - Do not modify README.md.
 - After completing and committing the changes, run `chezmoi apply` to synchronize managed files to this system.
+
+## Personal Skills
+
+- When skills are added to or removed from `/Users/jerry/github/my-skills/skills`, update the corresponding symlinks in `dot_agents/skills` and `dot_claude/skills` to keep them in sync.
