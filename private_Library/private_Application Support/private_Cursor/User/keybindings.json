@@ -1,6 +1,4 @@
-// Place your key bindings in this file to override the defaults
 [
-  // disable some keymaps
   {
     "key": "ctrl+6",
     "command": "-extension.vim_ctrl+6"
@@ -21,7 +19,6 @@
     "key": "cmd+shift+j",
     "command": "search.action.focusSearchList"
   },
-  // disable left panel teleport keymaps
   {
     "key": "cmd+shift+e",
     "command": "-workbench.view.explorer"
@@ -38,7 +35,6 @@
     "key": "cmd+shift+x",
     "command": "-workbench.view.extensions"
   },
-  // hjkl navigations
   {
     "key": "cmd+h",
     "command": "workbench.action.focusLeftGroup",
@@ -77,7 +73,6 @@
     "command": "workbench.action.focusFirstEditorGroup",
     "when": "!editorFocus"
   },
-  // buffer navigations
   {
     "key": "cmd+shift+h",
     "command": "workbench.action.previousEditor"
@@ -100,7 +95,6 @@
     "command": "filesExplorer.openFilePreserveFocus",
     "when": "explorerViewletFocus && !inputFocus && !listFocus"
   },
-  // closing editors
   {
     "key": "cmd+k cmd+w",
     "command": "-workbench.action.closeAllEditors"
