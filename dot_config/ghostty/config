@@ -2,7 +2,6 @@
 
 theme = Catppuccin Mocha
 
-font-size = 15
 font-family = "JetBrainsMono Nerd Font Mono"
 font-family = "Apple SD Gothic Neo"
 # if -calt, disables ligature
@@ -49,7 +48,11 @@ keybind = shift+page_down=scroll_page_down
 keybind = shift+enter=text:\n
 
 # Local-only file: ~/.config/ghostty/config.local (not managed by chezmoi).
-# Copy the settings you need from these examples into that file.
+# Copy settings from these examples into that file as needed.
+
+# Font size:
+# font-size = 15
+
 # Transparent background:
 # background-opacity = 0
 # background-blur = 20
@@ -58,5 +61,10 @@ keybind = shift+enter=text:\n
 # background-image = ~/wallpapers/wallpaper.jpg
 # background-image-fit = cover
 # background-opacity = 1
+
+# Defaults in this file; config.local can override them.
+font-size = 13
+background-opacity = 0
+background-blur = 20
 
 config-file = ?config.local
