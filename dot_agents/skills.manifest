@@ -1,0 +1,14 @@
+# List of agent skills to share. Managed with the syncing-skills skill.
+# Format: <repository> <skill name>
+
+forjd/better-writing      better-writing
+juliusbrussee/caveman     caveman
+juliusbrussee/caveman     caveman-commit
+juliusbrussee/caveman     caveman-compress
+juliusbrussee/caveman     caveman-review
+juliusbrussee/caveman     caveman-stats
+anthropics/skills         doc-coauthoring
+vercel-labs/skills        find-skills
+mattpocock/skills         grill-me
+kepano/obsidian-skills    obsidian-markdown
+vercel-labs/agent-skills  vercel-react-best-practices

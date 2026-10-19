@@ -19,3 +19,5 @@
 ## Personal Skills
 
 - When a skill is added to or removed from `~/github/my-skills/skills`, sync its symlinks in `dot_agents/skills` and `dot_claude/skills`.
+- Third-party skills installed with `npx skills` are listed in `dot_agents/skills.manifest`.
+  - Use the `syncing-skills` skill to add, remove, or reconcile them.
