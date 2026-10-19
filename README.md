@@ -1,5 +1,7 @@
 # dotfiles
 
+Below, "source" means this repository and "target" means the file chezmoi writes under the home directory.
+
 ### source file naming
 
 A prefix on a source filename sets an attribute on the target. chezmoi strips the prefix when it renders the target name.
@@ -16,20 +18,20 @@ A prefix on a source filename sets an attribute on the target. chezmoi strips th
 Any file placed in the source directory becomes a target in the home directory. A file that belongs to the repository alone,
 such as this README, has to be listed in `.chezmoiignore` to keep `chezmoi apply` from creating it in `~`.
 
-### add a chezmoi file
+### add a file to chezmoi
 
 ```bash
 chezmoi add ~/.dotfile
 ```
- 
-### edit chezmoi file and apply to source
+
+### edit a source file and apply it to the target
 
 ```bash
 chezmoi edit ~/.dotfile
 chezmoi apply
 ```
 
-### pull source changes to chezmoi file
+### pull target changes into the source
 
 ```bash
 # specific file
