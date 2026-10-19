@@ -18,4 +18,4 @@
 
 ## Personal Skills
 
-- When a skill is added to or removed from `/Users/jerry/github/my-skills/skills`, sync its symlinks in `dot_agents/skills` and `dot_claude/skills`.
+- When a skill is added to or removed from `~/github/my-skills/skills`, sync its symlinks in `dot_agents/skills` and `dot_claude/skills`.
