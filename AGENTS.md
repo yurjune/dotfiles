@@ -24,5 +24,5 @@ Do not force, merge, or roll back the changes. Report the situation and wait for
 ## Skill Management
 
 - When a skill is added to or removed from `~/github/my-skills/skills`, sync its symlinks in `dot_agents/skills` and `dot_claude/skills`.
-- Third-party skills installed with `npx skills` are listed in `dot_agents/skills.manifest`.
-  - Use the `syncing-skills` skill to add, remove, or reconcile them.
+- Third-party skills are installed per machine with `npx skills` and are not tracked in this repository.
+  Use the `syncing-skills` skill to add or remove them.
