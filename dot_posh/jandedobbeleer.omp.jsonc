@@ -28,25 +28,18 @@
           "template": " \uea83  {{ .Path }} ",
           "type": "path"
         },
-        // Git 상태
+        // Git branch
         {
           "background": "#fffb38",
-          "background_templates": [
-            "{{ if or (.Working.Changed) (.Staging.Changed) }}#FF9248{{ end }}",
-            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#ff4500{{ end }}",
-            "{{ if gt .Ahead 0 }}#B388FF{{ end }}",
-            "{{ if gt .Behind 0 }}#B388FF{{ end }}"
-          ],
           "foreground": "#193549",
           "leading_diamond": "\ue0b6",
           "powerline_symbol": "\ue0b0",
           "options": {
-            "branch_template": "{{ trunc 25 .Branch }}",
-            "fetch_status": true,
-            "fetch_upstream_icon": true
+            "branch_template": "{{ trunc 25 .Branch }}"
           },
           "style": "powerline",
-          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
+          // Git status scans this large repo on every prompt, so show only the branch.
+          "template": " {{ .HEAD }} ",
           "trailing_diamond": "\ue0b4",
           "type": "git"
         },
