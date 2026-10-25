@@ -70,29 +70,17 @@ alias tmuxs='for session in $(tmux list-sessions -F "#{session_name}"); do for w
 alias zshn="nvim ~/.zshrc"
 alias zshs="source ~/.zshrc"
 
-alias squiz="cd ~/github/sql-quiz && codex \"start quiz\""
-
 # cd
 alias cdn="cd ~/.config/nvim"
-alias cdm="cd ~/memo"
 alias cdns="cd ~/.local/share/nvim"
 
 alias cdc="cd ~/.local/share/chezmoi"
-alias cdo="cd ~/obsidian/jerry"
+alias cdj="cd ~/obsidian/jerry"
+alias cdh="cd ~/obsidian/honey"
 alias cdg="cd ~/github"
 
 alias codex="command codex --dangerously-bypass-approvals-and-sandbox"
 alias claude="command claude --dangerously-skip-permissions"
-
-alias cdon="cd ~/github/GBSOFT_GBON_WebFE/"
-alias cdcl="cd ~/github/GBSOFT_WebFE_Client/"
-alias cdgl="cd ~/github/GBSOFT_WebFE_Global/"
-alias cdho="cd ~/github/GBSOFT_WebFE_hoban/"
-if [[ "$IS_INTEL" == "true" ]]; then
-  alias cdbe="cd ~/github/GBSOFT_GBPLATFORM_BE/"
-else
-  alias cdbe="cd ~/github/gbsoft/GBSOFT_GBPLATFORM_BE/"
-fi
 
 ## ---- LOCAL ----
 . "$HOME/.local/bin/env"  # 별도의 쉘 환경설정(env) 파일 실행
