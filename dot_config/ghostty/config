@@ -15,6 +15,11 @@ macos-titlebar-style = tabs
 
 shell-integration = zsh
 
+# SSH features: Wrap interactive ssh with ghostty +ssh.
+# ssh-env: Forward Ghostty environment variables to remote hosts.
+# ssh-terminfo: Install remote terminfo; use xterm-ghostty on success, xterm-256color on failure.
+shell-integration-features = ssh-env,ssh-terminfo
+
 # when you drag any text, copy it immediately
 copy-on-select = clipboard
 
