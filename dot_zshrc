@@ -52,6 +52,7 @@ alias nv="nvim"
 alias lg="lazygit"
 alias ch="chezmoi"
 alias ff="fastfetch"
+alias sshs="sshs --sort-fancy"
 
 alias brewdump="brew bundle dump --force --file=~/.Brewfile"
 
