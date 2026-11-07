@@ -9,9 +9,7 @@ fi
 export PATH="$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH"
 
 ## ---- ENV ----
-export PATH="$HOMEBREW_PREFIX/opt/python@3.10/bin:$PATH"
 export PATH="$PATH:$HOME/.cargo/bin"
-export PYTHON="$HOMEBREW_PREFIX/opt/python@3.10/bin/python3"
 export PATH="$HOMEBREW_PREFIX/opt/openjdk/bin:$PATH"
 export PATH="$PATH:$HOME/go/bin"
 
@@ -87,3 +85,7 @@ alias claude="command claude --dangerously-skip-permissions"
 . "$HOME/.local/bin/env"  # 별도의 쉘 환경설정(env) 파일 실행
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+# Prefer uv-managed Python executables.
+export PATH="$HOME/.local/bin:$PATH"
+unset PYTHON
