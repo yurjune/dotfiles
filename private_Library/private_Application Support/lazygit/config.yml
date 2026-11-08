@@ -20,9 +20,8 @@ gui:
       - "#cdd6f4"
     searchingActiveBorderColor:
       - "#f9e2af"
-
-  authorColors:
-    "*": "#74c7ec"
+    authorColors:
+      "*": "#74c7ec"
 git:
   # prevent auto fast-forward on branch checkout
   autoForwardBranches: none
