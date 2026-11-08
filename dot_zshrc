@@ -36,9 +36,10 @@ eval "$(oh-my-posh init zsh --config ~/.posh/jandedobbeleer.omp.jsonc)"  # Theme
 
 # Optional: https://github.com/catppuccin/zsh-syntax-highlighting
 source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
-plugins=(git fzf-tab zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
+source "$HOMEBREW_PREFIX/opt/fzf-tab/share/fzf-tab/fzf-tab.zsh"
 
 ## ---- OPTIONS ----
 setopt IGNORE_EOF  # prevent kill shell by Ctrl-D
