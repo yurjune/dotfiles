@@ -34,3 +34,6 @@
 	algorithm = histogram
 [fetch]
 	prune = true
+[user]
+	name = yurjune
+	email = yurjune@naver.com
