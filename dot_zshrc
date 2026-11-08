@@ -83,7 +83,7 @@ alias codex="command codex --dangerously-bypass-approvals-and-sandbox"
 alias claude="command claude --dangerously-skip-permissions"
 
 ## ---- LOCAL ----
-. "$HOME/.local/bin/env"  # 별도의 쉘 환경설정(env) 파일 실행
+[ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"  # Load optional local shell environment
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
