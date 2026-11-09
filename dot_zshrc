@@ -82,6 +82,7 @@ alias cdns="cd ~/.local/share/nvim"
 alias cdc="cd ~/.local/share/chezmoi"
 alias cdj="cd ~/obsidian/study-notes"
 alias cdh="cd ~/obsidian/life-notes"
+alias cdw="cd ~/obsidian/work-notes"
 alias cdg="cd ~/github"
 
 alias codex="command codex --dangerously-bypass-approvals-and-sandbox"
