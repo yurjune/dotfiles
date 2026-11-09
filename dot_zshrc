@@ -51,7 +51,12 @@ alias nv="nvim"
 alias lg="lazygit"
 alias ch="chezmoi"
 alias ff="fastfetch"
+
 alias sshs="sshs --sort-fancy"
+# Set up remote terminfo for Ghostty.
+if [[ $TERM == xterm-ghostty ]]; then
+  alias sshs="sshs --sort-fancy --template 'ghostty +ssh -- \"{{{name}}}\"'"
+fi
 
 alias brewdump="brew bundle dump --force --file=~/.Brewfile"
 
