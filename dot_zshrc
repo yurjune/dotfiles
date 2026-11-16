@@ -12,10 +12,16 @@ eval "$(oh-my-posh init zsh --config ~/.posh/jandedobbeleer.omp.jsonc)"  # Theme
 
 # Optional: https://github.com/catppuccin/zsh-syntax-highlighting
 source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
+source "$ZSH/oh-my-zsh.sh"
+# Load fzf shell integration: Ctrl-R history, Ctrl-T files, Alt-C directories.
+# <(...) exposes the generated zsh script as a file for source.
+source <(fzf --zsh)
+
+# Load fzf-tab after compinit and before plugins that wrap ZLE widgets.
 source "$HOMEBREW_PREFIX/opt/fzf-tab/share/fzf-tab/fzf-tab.zsh"
+source "${ZSH_CUSTOM:-$ZSH/custom}/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 ## ---- OPTIONS ----
 setopt IGNORE_EOF  # prevent kill shell by Ctrl-D
@@ -48,7 +54,7 @@ alias tmK="tmux kill-server"
 # apply source ~/.zshrc to all tmux panes
 alias tmuxs='for session in $(tmux list-sessions -F "#{session_name}"); do for window in $(tmux list-windows -t "$session" -F "#{window_index}"); do for pane in $(tmux list-panes -t "$session:$window" -F "#{pane_index}"); do tmux send-keys -t "$session:$window.$pane" "source ~/.zshrc" Enter; done; done; done'
 
-alias zshn="nvim ~/.zshrc"
+alias zshn="chezmoi edit --apply ~/.zshrc"
 alias zshs="source ~/.zshrc"
 
 # cd
@@ -71,3 +77,6 @@ alias claude="command claude --dangerously-skip-permissions"
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 unset PYTHON
+
+# Load syntax highlighting after widgets and local configuration.
+source "${ZSH_CUSTOM:-$ZSH/custom}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
