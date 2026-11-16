@@ -34,3 +34,5 @@
 	algorithm = histogram
 [fetch]
 	prune = true
+[include]
+	path = ~/.gitconfig.local
