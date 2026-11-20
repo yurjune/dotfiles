@@ -32,5 +32,8 @@
 	algorithm = histogram
 [fetch]
 	prune = true
+[oh-my-zsh]
+	# Skip the dirty check on every prompt; show only the branch
+	hide-dirty = 1
 [include]
 	path = ~/.gitconfig.local
