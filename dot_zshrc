@@ -51,6 +51,10 @@ alias tmd="tmux detach"
 alias tmk="tmux kill-session"
 alias tmkt="tmux kill-session -t"
 alias tmK="tmux kill-server"
+
+# Load tmux.conf before resolving the custom command on a fresh server.
+alias tm3='tmux start-server \; if-shell -F 1 new-three'
+
 # apply source ~/.zshrc to all tmux panes
 alias tmuxs='for session in $(tmux list-sessions -F "#{session_name}"); do for window in $(tmux list-windows -t "$session" -F "#{window_index}"); do for pane in $(tmux list-panes -t "$session:$window" -F "#{pane_index}"); do tmux send-keys -t "$session:$window.$pane" "source ~/.zshrc" Enter; done; done; done'
 
