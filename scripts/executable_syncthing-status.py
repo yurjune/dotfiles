@@ -12,7 +12,6 @@ import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 
-
 GUI_ADDRESS = "127.0.0.1:8384"
 
 
@@ -20,7 +19,7 @@ def config_path():
     result = subprocess.run(
         ["syncthing", "paths"], capture_output=True, text=True, check=True
     )
-    match = re.search(r"^Configuration file:\s*\n\s*(.+)$", result.stdout, re.M)
+    match = re.search(r"^Configuration file:\s*\n\s*(.+)$", result.stdout, re.MULTILINE)
     if not match:
         raise RuntimeError("syncthing paths에서 설정 파일 경로를 찾지 못했습니다")
     return match.group(1).strip()
@@ -46,20 +45,27 @@ def table_cell(value):
 
 def display_width(value):
     return sum(
-        0 if unicodedata.combining(char) else
-        2 if unicodedata.east_asian_width(char) in ("F", "W") else 1
+        0
+        if unicodedata.combining(char)
+        else 2
+        if unicodedata.east_asian_width(char) in ("F", "W")
+        else 1
         for char in value
     )
 
 
 def print_table(headers, rows):
-    widths = [max(display_width(row[i]) for row in [headers, *rows])
-              for i in range(len(headers))]
+    widths = [
+        max(display_width(row[i]) for row in [headers, *rows])
+        for i in range(len(headers))
+    ]
     border = "+-" + "-+-".join("-" * width for width in widths) + "-+"
 
     def print_row(row):
-        cells = [cell + " " * (width - display_width(cell))
-                 for cell, width in zip(row, widths)]
+        cells = [
+            cell + " " * (width - display_width(cell))
+            for cell, width in zip(row, widths)
+        ]
         print("| " + " | ".join(cells) + " |")
 
     print(border)
@@ -116,8 +122,12 @@ def main():
             paused = connection.get("paused", False)
             if not connected:
                 has_disconnected_peer = True
-            if (not connected or paused or completion.get("completion") != 100
-                    or completion.get("remoteState") != "valid"):
+            if (
+                not connected
+                or paused
+                or completion.get("completion") != 100
+                or completion.get("remoteState") != "valid"
+            ):
                 has_problem = True
             peers.append(
                 {
@@ -129,10 +139,15 @@ def main():
                     "remoteState": completion.get("remoteState"),
                 }
             )
-        if (local.get("state") != "idle" or local.get("needTotalItems")
-                or local.get("pullErrors") or
-                (folder.get("type") == "receiveonly" and
-                 local.get("receiveOnlyTotalItems"))):
+        if (
+            local.get("state") != "idle"
+            or local.get("needTotalItems")
+            or local.get("pullErrors")
+            or (
+                folder.get("type") == "receiveonly"
+                and local.get("receiveOnlyTotalItems")
+            )
+        ):
             has_problem = True
         folders.append(
             {
@@ -151,18 +166,27 @@ def main():
 
     errors = api_get("/rest/system/error", key).get("errors") or []
     has_problem |= bool(errors)
-    print(f"Syncthing: {'문제 있음' if has_problem else '정상'} "
-          f"(조회 기기: {devices.get(local_id, local_id[:7])})")
+    print(
+        f"Syncthing: {'문제 있음' if has_problem else '정상'} "
+        f"(조회 기기: {devices.get(local_id, local_id[:7])})"
+    )
     for folder in folders:
-        line = (f"\n{folder['label']} ({folder['type']}) — 로컬: {folder['state']}"
-                f" · 대기 {folder['needTotalItems']} · 오류 {folder['pullErrors']}")
+        line = (
+            f"\n{folder['label']} ({folder['type']}) — 로컬: {folder['state']}"
+            f" · 대기 {folder['needTotalItems']} · 오류 {folder['pullErrors']}"
+        )
         if folder["type"] == "receiveonly":
             line += f" · 로컬 변경 {folder['receiveOnlyTotalItems']}"
         print(line)
         rows = []
         for peer in folder["peers"]:
-            connection = ("일시정지" if peer["paused"] else
-                          "연결됨" if peer["connected"] else "끊김")
+            connection = (
+                "일시정지"
+                if peer["paused"]
+                else "연결됨"
+                if peer["connected"]
+                else "끊김"
+            )
             completion = format_completion(peer["completion"])
             name = table_cell(f"{peer['name']} ({peer['id_prefix']})")
             remote_state = table_cell(peer["remoteState"] or "확인 불가")
