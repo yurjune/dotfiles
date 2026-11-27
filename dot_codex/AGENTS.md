@@ -47,6 +47,11 @@
   - 사용자가 받아들였다는 응답("좋아", "커밋해" 등)이 오면 커밋합니다.
   - 질문·수정 요청이 함께 있거나 받아들인 건지 애매하면 커밋하지 않고 확인합니다.
 
+## 그래프 활용
+
+여러 파일에 걸친 업무 흐름이나 코드·문서 간 관계를 파악할 때, 저장소 루트에 `graphify-out/graph.json`이 있으면
+`graphify query`로 관련 파일을 찾습니다. 실행이나 수정에 적용할 기준은 해당 파일의 최신 원문에서 확인합니다.
+
 # graphify
 - **graphify** (`~/.claude/skills/graphify/SKILL.md`) - any input to knowledge graph. Trigger: `/graphify`
 When the user types `/graphify`, use the installed graphify skill or instructions before doing anything else.
