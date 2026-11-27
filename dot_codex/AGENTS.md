@@ -46,3 +46,7 @@
 - **수락을 확인한 뒤 커밋하기**
   - 사용자가 받아들였다는 응답("좋아", "커밋해" 등)이 오면 커밋합니다.
   - 질문·수정 요청이 함께 있거나 받아들인 건지 애매하면 커밋하지 않고 확인합니다.
+
+# graphify
+- **graphify** (`~/.claude/skills/graphify/SKILL.md`) - any input to knowledge graph. Trigger: `/graphify`
+When the user types `/graphify`, use the installed graphify skill or instructions before doing anything else.
