@@ -1,9 +1,11 @@
--- Temporarily switch to English while Ctrl is held in Ghostty.
+-- Temporarily switch to English for terminal Ctrl shortcuts in Ghostty.
 -- This lets terminal Ctrl-letter shortcuts pass through the normal input path
 -- even when the current macOS input source is Korean.
 
 local englishInputSource = "com.apple.keylayout.ABC"
 local ghosttyBundleID = "com.mitchellh.ghostty"
+local eventTypes = hs.eventtap.event.types
+local spaceKeyCode = hs.keycodes.map.space
 
 local savedInputSource = nil
 
@@ -49,24 +51,20 @@ if _G.ghosttyCtrlInputSourceEventTap then
 	_G.ghosttyCtrlInputSourceEventTap = nil
 end
 
-_G.ghosttyCtrlInputSourceEventTap = hs.eventtap.new({ hs.eventtap.event.types.flagsChanged }, function(event)
+_G.ghosttyCtrlInputSourceEventTap = hs.eventtap.new({ eventTypes.flagsChanged, eventTypes.keyDown }, function(event)
 	local flags = event:getFlags()
-	local hasCtrl = flags.ctrl
-	local hasCmdOrAlt = flags.cmd or flags.alt
 
-	if not isGhosttyFocused() then
-		if savedInputSource then
-			finishCtrlShortcut()
-		end
-		return false
-	end
-
-	if hasCtrl and not hasCmdOrAlt then
-		beginCtrlShortcut()
-	elseif savedInputSource and hasCtrl and hasCmdOrAlt then
-		cancelRestore()
-	elseif savedInputSource and not hasCtrl then
+	if not flags.ctrl or not isGhosttyFocused() then
 		finishCtrlShortcut()
+	elseif flags.cmd or flags.alt then
+		cancelRestore()
+	elseif event:getType() == eventTypes.keyDown then
+		-- Let macOS handle its Ctrl+Space input-source shortcut.
+		if event:getKeyCode() == spaceKeyCode then
+			finishCtrlShortcut()
+		else
+			beginCtrlShortcut()
+		end
 	end
 
 	return false
